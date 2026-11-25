@@ -1,0 +1,20 @@
+Cotizaciones		http:// . . . . /sistema?page=cotiza
+Cotizacion nuevo	http:// . . . . /sistema?page=cotiza&movto=nvo
+Cotizacion edicion	http:// . . . . /sistema?page=cotiza&movto=edt&folio=xxxx
+Cotizacion consulta	http:// . . . . /sistema?page=cotiza&movto=cta&folio=xxxx
+
+OdeServicios		http:// . . . . /sistema?page=ordDeSrv
+OdeServicio nuevo	http:// . . . . /sistema?page=ordDeSvr&movto=nvo
+OdeServicio edicion	http:// . . . . /sistema?page=ordDeSvr&movto=edt&folio=xxxx
+OdeServicio consulta	http:// . . . . /sistema?page=ordDeSvr&movto=cta&folio=xxxx
+
+Tareas			http:// . . . . /sistema?page=tarea
+Tareas nueva		http:// . . . . /sistema?page=tarea&movto=nvo
+Tareas edicion		http:// . . . . /sistema?page=tarea&movto=edt&idTarea=xxxx
+Tareas consulta		http:// . . . . /sistema?page=tarea&movto=cta&idTarea=xxxx
+
+Productos y Servicios
+Clientes
+Unidades
+Impuestos
+Reportes

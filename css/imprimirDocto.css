@@ -1,0 +1,67 @@
+body { font-size: 10px; }
+table { width:100%; border:0px; font-size: 11px; }
+td { vertical-align:top; }
+th { 
+	background-color: #D8D8D8; 
+	border: 1px solid black;
+	text-transform:uppercase;
+}
+.tdEncabezadoLogo { width:15%; text-align:center; }
+.tdEncabezadoEmpresa { width:60%; text-align:center; }
+.tdEncabezadoFolio { width:25%; text-align:center; }
+.tdCantidad { width:10%; text-align:center; }
+.tdUnidad { width:10%; text-align:center; }
+.moneda { width:10%; text-align:right; }
+.tdCantidad2 { width:10%; text-align:center; background-color: #D8D8D8 }
+.tdUnidad2 { width:10%; text-align:center; background-color: #D8D8D8 }
+.tdDesc2 { background-color: #D8D8D8 }
+.moneda2 { width:10%; text-align:right; background-color: #D8D8D8 }
+.empresa { font-size:20px; font-weight:bold; }
+#btnImprimirDocto { font-size:12px }
+.btnImprimir { text-align:right; }
+.titulo {
+	text-transform:uppercase;
+	background-color:#D8D8D8;
+	border: 1px solid black;
+	display:block;
+	width:100%;
+	font-weight:bold;
+}
+.tituloCte {
+	text-transform:uppercase;
+	background-color:#D8D8D8;
+	border: 1px solid black;
+	width:50%;
+	font-weight:bold;
+}
+.datosCte {
+	text-transform:uppercase;
+	font-weight:bold;
+}
+#partidas { margin-top:1em; margin-bottom:1em }
+.titulo2 {
+	text-transform:uppercase;
+	background-color:#D8D8D8;
+	border: 1px solid black;
+	width:200px;
+	display:block;
+	font-weight:bold;
+}
+.importeLetra {
+	width: 80%;
+}
+.subTotal { 
+	text-align:center;
+	text-transform:uppercase;
+	background-color:#D8D8D8;
+	border: 1px solid black;
+	font-weight:bold;
+}
+.tdTiempoObsUsr {
+	width: 150px;
+	text-transform:uppercase;
+	background-color:#D8D8D8;
+	border: 1px solid black;
+	font-weight:bold;
+	margin-right: 2em;
+}

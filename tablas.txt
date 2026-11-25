@@ -1,0 +1,140 @@
+ListaEmpresas
+	usuarios
+		idUsr - AutoIncremento
+		nombreUsr
+		cveUsr - LlavePrincipal
+		passUsr
+		emailUsr
+		accesoEmpresas - default: todos
+		cvePerfil - default: todos
+	perfiles
+		idPerfil - AutoIncremento
+		cvePerfil - LlavePrincipal
+		nombrePerfil
+		cveModulo
+	modulos
+		idModulo - AutoIncremento, LlavePrincipal
+		nombreModulo
+	empresas
+		idEmpresa - AutoIncremento
+		cveEmpresa
+		nombreEmpresa
+		rfcEmpresa
+		calleEmpresa
+		noExteriorEmpresa
+		noInteriorEmpresa
+		municipioEmpresa
+		poblacionEmpresa
+		estadoEmpresa
+		paisEmpresa
+		codigoPostalEmpresa
+		regimenFiscalEmpresa
+		logoEmpresa
+		csdCertificadoEmpresa
+		csdKeyEmpresa
+		csdPassEmpresa
+	errores
+		idError - AutoIncremento, LlavePrincipal
+		mensaje
+		sugerencia
+Empresa
+	clientes
+		idCte - AutoIncremento
+		cveCte
+		nombreCte
+		nombreCortoCte
+		rfcCte
+		calleCte
+		noExteriorCte
+		noInteriorCte
+		municipioCte
+		poblacionCte
+		estadoCte
+		paisCte
+		codigoPostalCte
+		saldo
+	sucursalesClinetes
+		idSucursal
+		nombreSuc
+	productosServicios
+		idProdServ - AutoIncremento
+		cveProdServ - LlavePrincipal
+		nombreProdServ
+		descripcionProdServ
+		marcaProdServ
+		precioProdServ
+		noParteProdServ
+		idUnidad
+		idFamProdServ
+		idSubFamProdServ
+		idImpuesto
+	familiaProdServ
+		idFamProdServ
+		nombreFamProdServ
+	subFamiliaProdServ
+		idSubFamProdServ
+		nombreSubFamProdServ
+	unidades - default: No aplica, pieza, metro
+		idUnidad - AutoIncremento
+		nombreUnidad
+	tipoDocumento
+		idTipoDocto - AutoIncremento, LlavePrincipal
+		nombreTipoDocto
+	cotizaciones
+		idCotiza - AutoIncremento
+		fechaCot - mascara: yyyy-mm-dd
+		statusCot
+		vigenciaCot
+		cveCte - LlavePrincipalCompuesta
+		idSucursal
+		usuario
+	ordenDeServicio
+		idOrden - AutoIncremento
+		fechaOrd - mascara: yyyy-mm-dd
+		statusOrd
+		cveCte - LlavePrincipalCompuesta
+		idSucusal <--------------- Revisar
+		usuario
+		garantia
+		tiempoInvertido - mascara: hhh:mm:ss
+	movimientos
+		idMovto - AutoIncrementable
+		cveCte - LlavePrincipal
+		tipoDocto - LlavePrincipal
+		idDocto - LlavePrincipal
+		cveProdServ
+		cantidad
+		precioUnitario - default: productosServicios.precio
+		observacion
+		idImpuesto - default: productosServicios.cvrImpuesto
+		noSerie
+	movimientosPermanentes
+		idMovtoP - AutoIncrementable
+		folio - LlavePrincipalCompuesta
+		idCte - LlavePrincipalCompuesta
+		fecha
+		cantidad
+		precio
+		monto
+		observacion
+		nombreProductoServ
+		impuesto
+		nombreUsuario
+	impuestos - default: 16%
+		idImpuesto - AutoIncrementable
+		nombre
+		valor (%)
+	listaSMTP - default: gmail, hotmail, yahoo, prodigy
+		idSMTP - LlavePrincipal, AutoIncremento
+		nombreSMTP
+		puertoSMTP
+		hostSMTP
+		encriptadoSMTP
+		autenticacionSMTP
+
+
+
+
+***NOTAS***
+folioCot - LlavePrincipalCompuesta ---> COT+[nombreCortoCte]+[idCotiza] = COT-ALV1
+folioOrd - LlavePrincipalCompuesta ---> OS+[nombreCortoCte]+[idCotiza] = OS-PAQMEX1

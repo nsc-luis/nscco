@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link type="text/css" href="css/angular-auto-complete.css" rel="stylesheet">
+	<script src="js/jquery.js" language="javascript"></script>
+	<script src="js/jquery-ui.min.js" language="javascript"></script>
+	<script src="js/angular.min.js" language="javascript"></script>
+	<script>
+		$(function(){
+			$("#fechaActual").html(function(){
+				var fecha = new Date();
+				fecha = fecha.toISOString();
+				fecha = fecha.split("T")
+				return fecha[0];
+			});
+		});
+		var app = angular.module('TestApp', []);
+		app.factory("AutoCompleteService", ["$http", function ($http) {
+			return {
+				search: function (term) {
+					return $http.get("http://localhost/nscco/php/lib/fnGenerales.php?proceso=getInfoProdBuscado&cadena=" + term).then(function (response) {
+						return response.data;
+					});
+				}
+			};
+		}]);
+		app.directive("autocomplete", ["AutoCompleteService", function (AutoCompleteService) {
+			return {
+				restrict: "A",
+				link: function (scope, elem, attr, ctrl) {
+					elem.autocomplete({
+						source: function (searchTerm, response) {
+							AutoCompleteService.search(searchTerm.term).then(function (autocompleteResults) {
+								response($.map(autocompleteResults, function (autocompleteResult) {
+									return {
+										label: autocompleteResult.YourDisplayProperty,
+										value: autocompleteResult 
+									}
+								}))
+							});
+						},
+						minLength: 3,
+						select: function (event, selectedItem) {
+							// Do something with the selected item, e.g. 
+							scope.YourObject= selectedItem.item.value;
+							scope.$apply();
+							event.preventDefault();
+						}
+					});
+				}
+			};
+		}]);
+	</script>
+
+<body ng-app="TestApp">
+    <input ng-model="YourObject" autocomplete />
+	<div id="fechaActual"></div>
+</body>
+</html>

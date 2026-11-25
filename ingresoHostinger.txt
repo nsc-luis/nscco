@@ -1,0 +1,23 @@
+Ingreso a www.hostinger.com
+usuario:    	nsc_luis@nscco.com.mx
+contraseña:    	jpg1969
+host:        	networksharecomputer.16mb.com
+sitio:        	http://networksharecomputer.16mb.com/index.php
+===============================================
+Bases de datos MySQL
+base:        	u859003062_empre
+usuario:    	u859003062_empre
+contraseña:    	jpg1969
+host:        	mysql.hostinger.mx
+descripcion:	base de datos de la lista de empresas y usuarios
+
+base:        	u859003062_nscco
+usuario:    	u859003062_nscco
+contraseña:    	jpg1969
+host:        	mysql.hostinger.mx
+descripcion:	base de datos de la empresa
+===============================================
+Ingreso FTP
+usuario:	u859003062
+contraseña:	jpg1969
+host:		ftp.networksharecomputer.16mb.com 

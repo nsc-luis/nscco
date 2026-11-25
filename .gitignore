@@ -1,0 +1,5 @@
+/vendor/
+/aspnet_client/
+/php/lib/cConectaBD.php
+/php/lib/dompdf/
+/php/lib/PHPExcel/

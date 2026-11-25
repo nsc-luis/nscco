@@ -1,0 +1,112 @@
+class ConectaDB
+{
+	// variables
+	var userDB
+	var passDB
+	var hostDB
+	var db
+
+	// metodos
+	function __ConectaDB(host,usuario,pass)
+	function desconectaDB()
+
+	// sets
+	function setUserDB(user)
+	function setPassDB(pass)
+	function setHostDB(host)
+	function setDB(db)
+
+	// gets
+	function getUserDB()
+	function getPassDB()
+	function getHostDB()
+	function getDB()
+}
+
+class Consultas
+{
+	include(ConectaDB)
+
+	// variables
+	var resultado
+	var db
+	var sql
+
+	// metodos
+	function __Consultas()
+	function noDeRegistros()
+	function ultimoRegistro()
+	function consultarCFDI()
+	function insertarCFDI()
+	function actualizarCFDI()
+	function borrarCFDI()
+
+	// sets
+	function setResultado()
+
+	// gets
+	function getResultado()
+}
+
+class ConectaFTP
+{
+	// variables
+	var hostFTP
+	var userFTP
+	var passFTP
+	array(x,y) doctosCFDI
+	array(x) url
+	array(x) fecha
+
+	// metodos
+	function __ConectaFTP(host,userFTP,passFTP)
+	function eliminarArchivo(id)
+	function subirArchivoTmp(id)
+	function creaCarpeta(rfc,fecha)
+	function guardarArchivo(id)
+
+	// sets
+	function setHostFTP(host)
+	function setUserFTP(userFTP)
+	function setPassFTP(passFTP)
+	function setDocCFDI(x,y)
+	function setUrl(url)
+	function setFecha(fecha)
+
+	// gets
+	function getHostFTP()
+	function getUserFTP()
+	function getPassFTP()
+	function getDocCFDI(x,y)
+	function getUrl()
+	function getFecha()
+}
+
+class Usuario
+{
+	// variables
+	var rfcRazonSocial
+	var nomRazonSocial
+	var passRFC
+	
+	//metodos
+	function consultar()
+	function insertar()
+	function actualizar()
+	function borrar()
+
+	// sets
+	funtion setRfcRazonSocial(x)
+	funtion setNomRazonSocial(x)
+	funtion setPassRazonSocial(x)
+	
+	// sets
+	funtion getRfcRazonSocial()
+	funtion getNomRazonSocial()
+	funtion getPassRazonSocial()
+}
+
+class Login
+{
+	
+}

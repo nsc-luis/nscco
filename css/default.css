@@ -1,0 +1,274 @@
+/*** FORMATOS GENERALES ***/
+body { font-size: 12px; font-family: arial }
+table { font-size: 12px; font-family: arial }
+li { list-style: none; padding: 0 }
+ul { padding: 0 }
+a { text-decoration: none; color: black; }
+th { background-color: #D8D8D8; border: 1px solid black}
+label { 
+	display: block; width: 220px; float: left; 
+	background-color: #D8D8D8; height: 20px; 
+	margin-right: 10px; margin-top: 8px; 
+	text-align: right
+}
+input { width: 200px; margin-top: 8px; font-size: 13px }
+select { margin-top: 10px; font-size: 13px }
+textarea { margin-top: 8px; font-size: 13px }
+td { vertical-align:top; }
+a:hover { text-decoration: underline }
+.fleft { float:left }
+.fright { float:right }
+.fclear { clear:both }
+.cveObjeto { text-align: center }
+.centrado { text-align: center }
+.nombre {  }
+.rfc {  }
+.calle {  }
+.noExt {  }
+.colonia {  }
+.municipio {  }
+.estado {  }
+.pais {  }
+.cp {  }
+.telefono {  }
+.email {  }
+#fastInfo .noAVPorCaducar { font-size: 2em; font-weight: bold; color: red; }
+.moneda { text-align: right }
+.modTb { 
+	border: 2px solid gray; width: 100%; 
+	font-size: 13px; margin-top: 1em 
+}
+.modTdOpc { width: 5%; text-align: center }
+.modTdOpc2 { width: 5%; text-align: center; background-color: #D8D8D8 }
+.avisoFrm { font-size: 10px; color: red }
+table .trBD:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+#result { 
+	font-size: 14px;
+	color: red;
+	width: 100%;
+	text-align: center;
+	margin: 1em;
+}
+#btnNvoCte, #btnNvoProd, #btnNvaSucCte { z-index: 1 }
+
+/*** CONTENEDOR ***/
+#contenedor {
+	width: 1024px;
+	margin-top: 20px;
+	margin: auto;
+	padding: auto;
+}
+
+/*** ENCABEZADO ***/
+#cabecera {
+	height: 55px;
+}
+#cabecera span {
+	display: block;
+}
+#cabecera img {
+	margin-right: 5px;
+}
+.textoCabecera {
+	color: #585858;
+	font-weight: bold;
+	margin-top: 35px;
+	text-transform: uppercase;
+}
+.salir {
+	padding: 0px 10px;
+	text-align: center;
+	border-right: 1px solid black;
+}
+.salir a {
+	color: #585858
+}
+
+/*** MENU PRINCIPAL ***/
+#menu {
+	border: 1px solid black;
+	height: 30px;
+	background-image: url("../images/bgMenu.png");
+	background-repeat: repeat-x;
+}
+.menuLv1 {
+	text-align: center;
+	border-right: 1px solid black;
+	margin-top: -4px;
+}
+.menuLv1 a {
+	color: black;
+	font-weight: bold;
+	padding: 7px 20px;
+	position: relative;
+}
+.menuLv1 a:hover {
+	color: white;
+}
+.menuLv1:hover .menuLv2 {
+	display: block;
+}
+.menuLv2 {
+	z-index: 2;
+	display: none;
+	padding-top: 8px;
+	position: absolute;
+	border: .5px dotted #585858;
+	opacity: 0.95;
+}
+.menuLv2 a {
+	font-weight: initial !important;
+	text-transform: initial !important;
+	padding: 0px 10px !important;
+}
+.menuLv2 li {
+	background-color: #D8D8D8; 
+	text-align: left;
+	line-height: 25px;
+	position: relative;
+}
+.menuLv2 li a:hover {
+	color: black;
+	text-decoration: none;
+}
+.menuLv2 li:hover {
+	background-color: #D8D8D8;
+	border-left: 3px solid black;
+}
+.menuLv3 {
+	margin-top: -25px;
+	position: absolute;
+	display: none;
+	margin-left: 130px;
+	z-index: 3;
+	border: .5px dotted #585858;
+}
+.menuLv3 a {
+	display: block;
+	width: 160px;
+}
+.menuLv2 span {
+	margin-right: 20px;
+}
+.menuLv2 li:hover .menuLv3 {
+	display: block;
+}
+
+#infoSesion {
+	height: 46px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	margin-top: 5px;
+}
+#infoSesion a {
+	color: black;
+}
+#barraLateral {
+	border-right: 1px dotted black;
+	/* height: 400px; */
+	margin-top: 5px;
+	width: 150px;
+	padding: 5px;
+	display: none;
+}
+.infoVentana {
+	margin-top: 15px;
+	color: #0B3B0B;
+	font-weight: bold;
+	font-size: 15px;
+}
+#contenido {
+	/* height: 400px; */
+	width: 100%;
+	margin-top: 5px;
+	padding: 5px;
+	margin-bottom: 2em;
+}
+
+/*** MODULO CLIENTES ***/
+
+#datosDeLaPoliza { display: none; }
+
+/*** MODULO PRODUCTOS ***/
+
+/*** MODULO ORDEN DE SERVICO ***/
+#areaPartidasOrdServ { 
+	margin-top: 1em; margin-bottom: 1em; 
+	border-top: 1px solid gray; 
+}
+#btnAgregarPartidaOrdServ { margin: 1em }
+/* #listaOrdenesDeServicio { 
+	height: 400px;
+	overflow: auto;
+} */
+#datosPoliza { display: none }
+/* #filtroFecha, #filtroCliente, #filtroFolio, #cambioStatus {
+	display: none;
+} */
+#filtro label { width: 150px; }
+.controlDePaginas { display: none; }
+/* #filtro legend { 
+	width: 180px;
+	padding: 2px;
+	border: 1px solid black;
+	background-color: #FAFAFA;
+	font-weight: bold;
+	text-align: center;
+}
+#filtro button { margin-right: 1em; } */
+#listaCFDI { 
+	height: 400px;
+	overflow: auto;
+}
+#ActionBtn button { padding: 1px; }
+.subTotal {  
+	border-bottom: 1px solid gray; 
+	font-size: 18px;
+	width: 100%;
+	text-align: right;
+	font-style: italic;
+}
+.checkOrdServ { width: 4%; text-align:center;}
+.checkOrdServ input {width: 20px;}
+.checkOrdServ2 { width: 4%; text-align:center; background-color: #D8D8D8 }
+.checkOrdServ2 input {width: 20px;}
+
+.borrarFiltro { font-size: 9px; }
+
+.controlDePaginas {
+	width: 100%;
+	text-align: right;
+	margin-top: -20px;
+	padding: 10px;
+}
+
+/*** MODULO FRASE DEL DIA ***/
+.cita {
+	margin: 2em;
+	font: oblique 150% cursive;
+}
+.autorcita {
+	width: 100%;
+	text-align: right;
+}
+/*** MODULO RESPALDOS ***/
+.btnRestauraBkp { font-size: 13px }
+.modTdBkp { background-color: #D8D8D8 }
+/*** MODULO RESPALDOS ***/
+.tdModXMLFolio { text-align:center; width: 14% }
+.tdModXMLTipoDocto { text-align:center; width: 10% }
+.tdModXMLRazon { width: 50% }
+.tdModXMLFecha { text-align:center; width: 10% }
+.tdModXMLTotal { width: 10% }
+.tdModXMLBtn { font-size: 12px; text-align:center; width: 3%; padding: 5px}
+
+.tdModXMLFolio2 { text-align:center; width: 14%; background-color: #D8D8D8 }
+.tdModXMLTipoDocto2 { text-align:center; width: 10%; background-color: #D8D8D8}
+.tdModXMLRazon2 { width: 50%; background-color: #D8D8D8 }
+.tdModXMLFecha2 { text-align:center; width: 10%; background-color: #D8D8D8 }
+.tdModXMLTotal2 { width: 10%; background-color: #D8D8D8 }
+.tdModXMLBtn2 { font-size: 12px; text-align:center; width: 3%; background-color: #D8D8D8; padding: 5px }
+
+/*** MODULO USUARIOS ***/
